@@ -1,0 +1,70 @@
+/* CW-05: simple form layout */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f6f7f8;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+.page { max-width: 640px; margin: 48px auto; padding: 0 20px; }
+.page-heading { margin-bottom: 23px; }
+.course { color: #555; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
+h1 { font-size: 29px; margin: 0 0 6px; }
+.page-heading > p:last-child { color: #555; margin: 0; }
+.form-section, .result-section {
+  background: white;
+  border: 1px solid #d9dde2;
+  border-radius: 7px;
+  padding: 26px;
+}
+h2 { font-size: 19px; margin: 0 0 5px; }
+.required-note { color: #666; font-size: 14px; margin: 0 0 21px; }
+.field { margin-bottom: 18px; }
+label { display: block; font-size: 14px; font-weight: bold; margin-bottom: 6px; }
+label span { color: #b42318; }
+input {
+  width: 100%;
+  padding: 10px 11px;
+  font: inherit;
+  border: 1px solid #aeb7c2;
+  border-radius: 4px;
+  background: white;
+}
+input:focus { outline: 2px solid #245b92; outline-offset: 1px; }
+input.invalid { border-color: #b42318; background: #fffafa; }
+.field-error { color: #b42318; font-size: 13px; font-weight: bold; }
+.field-error:not(:empty) { margin-bottom: 5px; }
+.error-summary {
+  color: #9a1d1d;
+  background: #fff4f4;
+  border-left: 3px solid #b42318;
+  padding: 10px 12px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+.error-summary[hidden], .result-section[hidden] { display: none; }
+button {
+  background: #265d90;
+  color: white;
+  padding: 10px 27px;
+  font: inherit;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: #19466f; }
+button:focus-visible { outline: 3px solid #245b92; outline-offset: 3px; }
+.result-section { margin-top: 19px; }
+.success-message { color: #24653b; font-size: 14px; margin: 6px 0 15px; }
+.result-list { margin: 0; }
+.result-list > div { display: grid; grid-template-columns: 125px 1fr; padding: 9px 0; border-top: 1px solid #eceef0; gap: 12px; }
+dt { color: #555; font-weight: bold; }
+dd { margin: 0; overflow-wrap: anywhere; }
+footer { color: #777; text-align: center; font-size: 12px; margin: 22px 0; }
+@media (max-width: 480px) {
+  .page { margin: 25px auto; }
+  .form-section, .result-section { padding: 18px; }
+  .result-list > div { grid-template-columns: 100px 1fr; }
+}
